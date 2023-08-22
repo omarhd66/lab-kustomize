@@ -1,5 +1,5 @@
 commonLabels:
-  version: v2-umer
+  version: v2-umer-2
 
 resources:
 - ../base
