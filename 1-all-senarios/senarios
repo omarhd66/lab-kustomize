@@ -1,0 +1,28 @@
+lecture 3-the-ufile
+- on top of the base file
+    has wordpress image
+    index file attached to emptydir vol 
+1. add lable the-ufile-part
+2. ganarate configmap with index.php local file
+3. add prefix lec-the-ufile and sufix -k
+4. create namespace the-ufile
+5. deploy the app on the the-ufile ns 
+6. add resource from github
+7. create a service to export app
+
+- create mysql depl in a folder
+1. image=mysql:5.6  port=3306
+   volume  /var/lib/mysql to emptydir
+   resouces:
+   requests memory=64Mi cpu=50m
+   limits memory=128Mi cpu=100m
+   
+2. generage secret 
+    MYSQL_ROOT_PASSWORD= YWRtaW4=
+    MYSQL_DATABASE= d29yZHByZXNz
+3. create service
+    port=3306
+    selector  app=mysql
+4. the mysql to the main wordpress app
+5. put resources into a patch patches/patch-limits
+   merge the patch into the mysql app
