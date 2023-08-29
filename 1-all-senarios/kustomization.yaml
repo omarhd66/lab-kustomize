@@ -5,12 +5,25 @@ kind: Kustomization
 commonLabels:
   version: the-ufile-part
   owner: umer
+ 
+#namespace: the-ufile
+
+namePrefix: lec-the-ufile-
+nameSuffix: -k
 
 configMapGenerator:
 - name: index.php
   files:
   - index.php
-
+  options:
+    disableNameSuffixHash: true
+- name: index.html
+  files:
+  - index.html
+  options:
+    disableNameSuffixHash: true
 
 resources:
 - base
+- namespace.yaml
+

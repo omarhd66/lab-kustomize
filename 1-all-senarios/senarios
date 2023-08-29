@@ -4,7 +4,10 @@ lecture 3-the-ufile
     index file attached to emptydir vol 
 1. add lable the-ufile-part
 2. ganarate configmap with index.php local file
-3. add prefix lec-the-ufile and sufix -k
+   add configmap on base file as volume
+ganarate configmap with index.php local file
+   add configmap on base file as volume
+3. add prefix lec-the-ufile- and sufix -k
 4. create namespace the-ufile
 5. deploy the app on the the-ufile ns 
 6. add resource from github

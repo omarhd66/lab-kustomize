@@ -20,12 +20,11 @@ spec:
       containers:
       - image: wordpress
         name: wordpress
-        envFrom:
-          - configMapRef:
-              name: index.php
-      volumeMounts:
-      - mountPath: /var/www/html
-        name: index.html
-    volumes:
-    - name: index.html
-      emptyDir: {}
+        #command: [ "/bin/sh", "-c", "mkdir /config/" ]
+        volumeMounts:
+        - mountPath: /config
+          name: index-php
+      volumes:
+      - name: index-php
+        configMap:
+          name: lec-the-ufile-index.php-k 
